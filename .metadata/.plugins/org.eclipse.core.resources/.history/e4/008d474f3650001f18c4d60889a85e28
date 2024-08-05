@@ -1,0 +1,47 @@
+package com.aurionpro.structural.composite.model;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Stream;
+
+public class CompositeOfComponents implements ComponentsOfComputer {
+	private String name;
+	List<ComponentsOfComputer> components = new ArrayList<>();
+
+	public CompositeOfComponents(String name) {
+		super();
+		this.name = name;
+	}
+
+	public void addComponent(ComponentsOfComputer component) {
+		components.add(component);
+	}
+
+	public void removeComponent(ComponentsOfComputer component) {
+		components.remove(component);
+	}
+
+	public void getTotalPrice() {
+
+	}
+
+	@Override
+	public int getPrice() {
+		// TODO Auto-generated method stub
+
+		Stream price = components.stream().map((component) -> component.getPrice());
+		Optional<Integer> totalPrice =  (Optional<Integer>) price.reduce(0,
+				(component1, component2) ->  component1.getPrice()
+						-  component2.getPrice());
+		return totalPrice;
+	}
+
+	@Override
+	public void display() {
+		for (ComponentsOfComputer component : components) {
+			component.display();
+		}
+	}
+
+}

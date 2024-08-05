@@ -1,0 +1,8 @@
+package com.aurionpro.model;
+
+import java.util.Arrays;
+import java.util.List;
+
+public class Country {
+	List<String, String, Integer> countries = Arrays.asList(a)
+}

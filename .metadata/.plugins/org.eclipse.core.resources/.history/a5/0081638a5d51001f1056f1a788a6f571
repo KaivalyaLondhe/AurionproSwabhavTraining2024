@@ -1,0 +1,15 @@
+package com.aurionpro.test;
+
+import org.junit.jupiter.api.Test;
+
+import com.aurionpro.model.Operations;
+
+class OperationsTest {
+
+	@Test
+	void testAddition() {
+		Operations operations = new Operations();
+		int actual = operations.add(5,5);
+	}
+
+}

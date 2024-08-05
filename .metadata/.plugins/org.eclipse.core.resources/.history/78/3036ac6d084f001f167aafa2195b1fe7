@@ -1,0 +1,7 @@
+package com.aurionpro.creational.abstractfactory.test;
+
+public class CarTest {
+	public static void main(String[] args) {
+		ICar car
+	}
+}

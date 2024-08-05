@@ -1,0 +1,16 @@
+package com.aurionpro.model;
+
+
+
+public class Country {
+	private String countryCode;
+	private String countryName;
+	private Integer regionId;
+	public Country(String countryCode, String countryName, Integer regionId) {
+		super();
+		this.countryCode = countryCode;
+		this.countryName = countryName;
+		this.regionId = regionId;
+	}
+	
+}

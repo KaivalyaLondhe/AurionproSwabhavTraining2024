@@ -1,0 +1,8 @@
+package com.aurionpro.ocp.solution.model;
+
+public class CalculateFixedDeposit {
+	IFestivalInterest festival = new IfestivalInterest.
+	public double calculateSimpleInterest() {
+		return 
+	}
+}

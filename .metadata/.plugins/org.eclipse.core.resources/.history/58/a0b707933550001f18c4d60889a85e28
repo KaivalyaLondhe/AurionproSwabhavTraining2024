@@ -1,0 +1,17 @@
+package com.aurionpro.structural.composite.test;
+
+import com.aurionpro.structural.composite.model.ComponentPartsOfComputer;
+
+public class ComputerTest {
+	public static void main(String[] args) {
+		ComponentPartsOfComputer hardDrive = new ComponentPartsOfComputer("Seagate Baraccuda Green", 4500);
+		ComponentPartsOfComputer ram = new ComponentPartsOfComputer("G.Skill Ripjaws", 2200);
+		ComponentPartsOfComputer gpu = new ComponentPartsOfComputer("NVDIA RTX 4090", 215000);
+		ComponentPartsOfComputer cpu = new ComponentPartsOfComputer("Seagate Baraccuda Green", 4500);
+		ComponentPartsOfComputer mouse = new ComponentPartsOfComputer("Seagate Baraccuda Green", 4500);
+		ComponentPartsOfComputer keyboard = new ComponentPartsOfComputer("Seagate Baraccuda Green", 4500);
+		ComponentPartsOfComputer monitor = new ComponentPartsOfComputer("Seagate Baraccuda Green", 4500);
+		
+		
+	}
+}

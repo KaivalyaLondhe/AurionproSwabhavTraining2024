@@ -1,0 +1,15 @@
+package com.aurionpro.creational.abstractfactory.test;
+
+import java.util.Scanner;
+
+public class AccountTest {
+	static Scanner scanner = new Scanner(System.in);
+	private void menu() {
+		System.out.println("Choose what you want to do today. \n 1. Create Account \n 2. ");
+		
+	}
+	public static void main(String[] args) {
+		
+	
+}
+}

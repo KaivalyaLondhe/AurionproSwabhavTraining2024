@@ -1,0 +1,46 @@
+package com.aurionpro.creational.abstractfactory.model;
+
+public class SavingsAccount implements IAccount{
+	
+	private long accountNumber;
+	private String name;
+	private double balance;
+	private double minimumBalance;
+	
+	
+
+	public SavingsAccount(long accountNumber, String name, double balance, double minimumBalance) {
+		super();
+		this.accountNumber = accountNumber;
+		this.name = name;
+		this.balance = balance;
+		this.minimumBalance = minimumBalance;
+		if(this.balance<this.minimumBalance) {
+			System.err.println("The available balance in your account is less than minimum balance");
+		}
+	}
+
+	@Override
+	public void credit(double amount) {
+		// TODO Auto-generated method stub
+		if(amount<=0) {
+			System.out.println("Please enter valid amount");
+			return;
+		}
+		balance += amount;
+		System.out.println("Amount creditted successfully. New available balance is Rs. " + balance);
+		
+	}
+
+	@Override
+	public void debit(double amount) {
+		// TODO Auto-generated method stub
+		if(amount>balance) {
+			System.out.println("The amount you are trying to withdraw is more the the available balance in your account!" );
+			return;
+		}
+		balance -= amount;
+		System.out.println("Amount debitted successfully. New available balance is Rs. " + balance);
+	}
+
+}

@@ -1,0 +1,14 @@
+package com.aurionpro.structural.adapter.model;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ShoppingCart {
+	IItems biscuit = new Biscuit("Good Day", 200);
+	IItems Chocolate = new 
+	List<IItems> cart = new ArrayList<IItems>();
+	public void addItemsToCart(List<IItems>) {
+		
+	}
+
+}

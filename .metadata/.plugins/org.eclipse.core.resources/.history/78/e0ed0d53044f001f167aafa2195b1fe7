@@ -1,0 +1,10 @@
+package com.aurionpro.creational.factory.model;
+
+public class AccountFactory {
+	public static IAccount accountFactory(long accountNumber, String name, double balance, AccountType accountType) {
+		switch(accountType)
+		{
+		case 
+		}
+	}
+}

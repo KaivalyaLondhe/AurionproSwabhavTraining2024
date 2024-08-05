@@ -1,0 +1,18 @@
+package com.aurionpro.creational.factory.model;
+
+public class CurrentAccount extends IAccount {
+	private double OVERDRAFT_LIMIT;
+	public CurrentAccount(long accountNumber, String name, double balance, double OVERDRAFT_LIMIT) {
+		super(accountNumber, name, balance);
+		this.OVERDRAFT_LIMIT = OVERDRAFT_LIMIT;
+		// TODO Auto-generated constructor stub
+	}
+	public double getOVERDRAFT_LIMIT() {
+		return OVERDRAFT_LIMIT;
+	}
+	public void setOVERDRAFT_LIMIT(double oVERDRAFT_LIMIT) {
+		OVERDRAFT_LIMIT = oVERDRAFT_LIMIT;
+	}
+	
+
+}

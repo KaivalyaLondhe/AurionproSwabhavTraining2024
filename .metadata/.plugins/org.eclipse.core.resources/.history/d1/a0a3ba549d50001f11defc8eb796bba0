@@ -1,0 +1,20 @@
+package com.aurionpro.behavioural.strategy.model;
+
+public class OperationStrategy {
+	IOperation operation;
+	private int number1;
+	private int number2;
+	public OperationStrategy(IOperation operation) {
+		super();
+		this.operation = operation;
+		
+	}
+	public int doOperation(int number1, int number2) {
+		return operation.doOperation(number1, number1);
+	}
+	public void setOperation(IOperation operation) {
+		this.operation = operation;
+	}
+	
+	
+}

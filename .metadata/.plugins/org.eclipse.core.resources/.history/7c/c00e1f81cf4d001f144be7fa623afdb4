@@ -1,0 +1,23 @@
+package com.aurionpro.test;
+
+import java.io.FileInputStream;
+import java.io.ObjectOutputStream;
+import java.io.OutputStream;
+import java.util.Arrays;
+import java.util.List;
+
+public class PrintingLinesOfFileUsingFileReader {
+	
+	List<String> names = Arrays.asList("Kaivalya", "Sarvesh", "Ashish", "Saahil", "Piyush");
+	
+	try {
+	FileInputStream fout = new FileInputStream("names.txt");
+	ObjectOutputStream out = new ObjectOutputStream(fout)){
+		out.writeObject(names);
+		out.flush();
+		
+	}catch(IOException e) {
+		
+	}
+	}
+}

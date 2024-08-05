@@ -1,0 +1,16 @@
+package com.aurionpro.structural.adapter.model;
+
+public class Biscuit implements IItems{
+	private String name;
+	private double mrp;
+	@Override
+	public String getItemName() {
+		// TODO Auto-generated method stub
+		return name;
+	}
+	@Override
+	public Double getItemPrice() {
+		// TODO Auto-generated method stub
+		return mrp;
+	}
+}

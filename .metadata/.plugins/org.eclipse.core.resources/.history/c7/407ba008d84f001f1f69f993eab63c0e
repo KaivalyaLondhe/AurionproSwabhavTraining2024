@@ -1,0 +1,14 @@
+package com.aurionpro.structural.decorator.test;
+
+import com.aurionpro.structural.decorator.model.CarServiceDecorator;
+import com.aurionpro.structural.decorator.model.ICarService;
+import com.aurionpro.structural.decorator.model.OilChange;
+
+public class CarServiceTest {
+	public static void main(String[] args) {
+		ICarService car = null;
+		System.out.println(car.getCost());
+		ICarService car1 = new OilChange();
+		System.out.println(car1.getCost());
+	}
+}

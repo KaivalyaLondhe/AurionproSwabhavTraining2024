@@ -1,0 +1,14 @@
+package com.aurionpro.dip.violation.model;
+
+public class DBLogger {
+	private String err;
+	
+	public DBLogger(String err) {
+		super();
+		this.err = err;
+	}
+
+	public static void log(String err) {
+		System.out.println("Logged to database : " + err);
+	}
+}

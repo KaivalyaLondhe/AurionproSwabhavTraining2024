@@ -1,0 +1,14 @@
+package com.aurionpro.test;
+
+import java.util.Arrays;
+import java.util.List;
+
+import com.aurionpro.model.Account;
+
+public class AccountList {
+	public static void main(String[] args) {
+		List<Account> accountList = Arrays.asList((new Account(124,"Kaivalya", 400)), new Account(345,"Sarvesh", 3409), new Account(45,"Ashish", 234));
+		
+		
+	}
+}

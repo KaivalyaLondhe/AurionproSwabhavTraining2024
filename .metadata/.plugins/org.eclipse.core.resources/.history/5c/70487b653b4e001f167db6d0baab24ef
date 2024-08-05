@@ -1,0 +1,7 @@
+package com.aurionpro.iso.sollution.test;
+
+public class WorkerTest {
+	public static void main(String[] args) {
+		
+	}
+}

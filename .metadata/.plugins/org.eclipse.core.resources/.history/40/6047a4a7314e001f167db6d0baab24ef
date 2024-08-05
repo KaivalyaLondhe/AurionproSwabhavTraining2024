@@ -1,0 +1,16 @@
+package com.aurionpro.ocp.violation.model;
+
+public class SimpleInterestCalculator {
+	private int accountNumber;
+	private String name;
+	private double principle;
+	private int duration;
+	private FestivalType festival;
+	FixedDeposit fixedDeposit = new FixedDeposit(accountNumber, name, principle, duration, festival);
+	InterestRateCalculator interestRate = new InterestRateCalculator();
+	
+	double interestRateFinal = interestRate.getInterestRates(choice);
+	public double calculateSimpleInterest(principle, duration, ) {
+		
+	}
+}

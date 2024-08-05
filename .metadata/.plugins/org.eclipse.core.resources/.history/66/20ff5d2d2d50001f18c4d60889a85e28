@@ -1,0 +1,31 @@
+package com.aurionpro.structural.composite.model;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class CompoundGraphic implements IGraphic{
+
+	private List<IGraphic> graphic;
+	public void add(IGraphic child) {
+		graphic.add(child);
+	}
+	public void remove(IGraphic child) {
+		graphic.remove(child);
+	}
+	@Override
+	public void move(int value1, int value2) {
+		for(IGraphic child: graphic) {
+			child.move(value1, value2);
+		}
+		
+	}
+
+	@Override
+	public void draw() {
+		for(IGraphic child: graphic) {
+			
+		}
+		
+	}
+
+}

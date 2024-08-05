@@ -1,0 +1,29 @@
+package com.aurionpro.model;
+
+public class HatDecorator implements IHat{
+	IHat hat;
+	
+	public HatDecorator() {
+		super(hat);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public String getName() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getPrice() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getDescription() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

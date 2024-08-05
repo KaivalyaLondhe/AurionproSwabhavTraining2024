@@ -1,0 +1,32 @@
+package com.aurionpro.ocp.violation.model;
+
+public class InterestRateCalculator {
+	private int accountNumber;
+	private String name;
+	private double principle;
+	private int duration;
+	private FestivalType festival;
+	private int choice;
+	
+	public InterestRateCalculator(int choice) {
+		super();
+		this.choice = choice;
+	}
+
+	FixedDeposit fixedDeposit = new FixedDeposit(accountNumber, name, principle, duration, festival);
+	
+	public static double getInterestRates(FestivalType festival) {
+		switch(festival) {
+		case NEWYEAR: 
+			return 8;
+		case DIWALI: 
+			return 8.5;
+		case HOLI: 
+			return 7.5;
+		case OTHERS:
+			return 6.5;
+		default: return 0;
+		}
+		
+	}
+}

@@ -1,0 +1,9 @@
+package com.aurionpro.ocp.violation.model;
+
+public class FixedDeposit {
+	private int accountNumber;
+	private String name;
+	private double principle;
+	private int duration;
+	
+}

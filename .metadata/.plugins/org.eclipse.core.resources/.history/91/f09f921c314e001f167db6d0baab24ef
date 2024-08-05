@@ -1,0 +1,6 @@
+package com.aurionpro.ocp.violation.model;
+
+public class SimpleInterestCalculator {
+	FixedDeposit fixedDeposit = new FixedDeposit(accountNumber, name, principle, duration, festival);
+	InterestRateCalculator interestRate = new InterestRateCalculator();
+}

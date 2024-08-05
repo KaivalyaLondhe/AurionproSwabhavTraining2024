@@ -1,0 +1,7 @@
+package com.aurionpro.structural.composite.test;
+
+public class ComputerTest {
+	public static void main(String[] args) {
+		
+	}
+}

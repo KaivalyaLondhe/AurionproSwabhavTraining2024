@@ -1,0 +1,29 @@
+package com.aurionpro.creational.builder.model;
+
+public class Phone {
+    private String processor;
+    private String brandName;
+    private int ramSize; // in GB
+    private double price; // in USD
+    private double displaySize; // in inches
+
+    // Private constructor to force the use of the builder
+    public Phone(PhoneBuilder builder) {
+        this.processor = builder.processor;
+        this.brandName = builder.brandName;
+        this.ramSize = builder.ramSize;
+        this.price = builder.price;
+        this.displaySize = builder.displaySize;
+    }
+
+    @Override
+    public String toString() {
+        return "Phone{" +
+                "processor='" + processor + '\'' +
+                ", brandName='" + brandName + '\'' +
+                ", ramSize=" + ramSize +
+                ", price=" + price +
+                ", displaySize=" + displaySize +
+                '}';
+    }
+

@@ -1,0 +1,10 @@
+package com.aurionpro.srp.solution.model;
+
+public class TaxCalculator {
+	private Invoice invoice;
+	
+	public void taxCalculator(Invoice invoice)
+	{
+		
+	}
+}

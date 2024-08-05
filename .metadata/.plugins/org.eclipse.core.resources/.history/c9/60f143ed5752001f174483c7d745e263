@@ -1,0 +1,38 @@
+package com.aurionpro.model;
+
+public class Player implements IPlayers {
+	char symbol;
+	Board board;
+
+	public Player(char symbol) {
+		super();
+		this.symbol = symbol;
+	}
+
+	public char getSymbol() {
+		return symbol;
+	}
+
+	public void setSymbol(char symbol) {
+		this.symbol = symbol;
+	}
+
+	public void playerSwitch() {
+	  if(player.getSymbol == 'x') {
+		     player.setSymbol == 'o';    }
+		    player.play;    if(player.getSymbol == 'o') {
+		     player.setSymbol == 'x';    }
+	}
+
+	@Override
+	public void play(int row, int column) {
+		// TODO Auto-generated method stub
+		char[][] board1 = board.initializeBoard();
+		if (board1[row][column] == '-') {
+			board1[row][column] = symbol;
+			return;
+		}
+		System.out.println("That move cannot be performed");
+	}
+
+}

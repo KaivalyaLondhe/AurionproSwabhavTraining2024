@@ -1,0 +1,39 @@
+package com.aurionpro.creational.builder.model;
+
+public class PhoneBuilder {
+	  private String processor;
+      private String brandName;
+      private int ramSize;
+      private double price;
+      private double displaySize;
+
+      public PhoneBuilder setProcessor(String processor) {
+          this.processor = processor;
+          return this;
+      }
+
+      public PhoneBuilder setBrandName(String brandName) {
+          this.brandName = brandName;
+          return this;
+      }
+
+      public PhoneBuilder setRamSize(int ramSize) {
+          this.ramSize = ramSize;
+          return this;
+      }
+
+      public PhoneBuilder setPrice(double price) {
+          this.price = price;
+          return this;
+      }
+
+      public PhoneBuilder setDisplaySize(double displaySize) {
+          this.displaySize = displaySize;
+          return this;
+      }
+
+      public Phone build() {
+          return new Phone(this);
+      }
+  }
+}

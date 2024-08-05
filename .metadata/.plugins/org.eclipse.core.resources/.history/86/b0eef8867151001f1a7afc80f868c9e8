@@ -1,0 +1,15 @@
+package com.aurionpro.model;
+
+public class trialanderror {
+	public static void main(String[] args) {
+		int size1 = 3;
+		int size2 = 3;
+		String[][] characters = new String[size1][size2];
+		for(String i [] : characters) {
+			for(j=0;i<i.length;j++) {
+				System.out.println(j);
+			}
+		}
+	}
+	
+}

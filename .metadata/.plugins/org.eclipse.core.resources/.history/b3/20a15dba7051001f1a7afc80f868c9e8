@@ -1,0 +1,12 @@
+package com.aurionpro.model;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.List;
+
+public class trialanderror {
+	public static void main(String[] args) {
+		Character characters = new Character[][]();
+		
+	}
+}

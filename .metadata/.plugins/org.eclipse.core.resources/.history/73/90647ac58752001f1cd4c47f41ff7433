@@ -1,0 +1,15 @@
+package com.aurionpro.test;
+
+import com.aurionpro.model.TicTacToeFacade;
+
+public class TicTacToe {
+    public static void main(String[] args) {
+        TicTacToeFacade game = new TicTacToeFacade();
+        game.startGame();
+        
+        // For testing, you might want to simulate moves
+        // game.playMove(0, 0);
+        // game.playMove(1, 1);
+        // Add more moves as needed.
+    }
+}

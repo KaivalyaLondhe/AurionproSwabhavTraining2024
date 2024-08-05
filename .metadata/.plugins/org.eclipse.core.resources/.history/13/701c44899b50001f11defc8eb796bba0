@@ -1,0 +1,16 @@
+package com.aurionpro.behavioural.state.test;
+
+import com.aurionpro.behavioural.state.model.Delivered;
+import com.aurionpro.behavioural.state.model.IPacketState;
+import com.aurionpro.behavioural.state.model.Packet;
+
+public class PacketTest {
+	public static void main(String[] args) {
+		Packet packet1 = null;
+		Packet packet = new Packet(new Delivered(packet1));
+		packet.currentStatus();
+	}
+	
+	
+	
+}

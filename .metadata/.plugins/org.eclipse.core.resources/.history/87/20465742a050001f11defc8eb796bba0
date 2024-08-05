@@ -1,0 +1,14 @@
+package com.aurionpro.behavioural.command.test;
+
+import com.aurionpro.behavioural.command.model.Fan;
+
+public class RemoteTest {
+	public static void main(String[] args) {
+		Fan fan = new Fan();
+		fan.turnOn();
+		fan.turnOn();
+		
+		
+	}
+	
+}

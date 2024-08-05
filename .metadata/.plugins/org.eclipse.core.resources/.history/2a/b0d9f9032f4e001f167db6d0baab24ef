@@ -1,0 +1,13 @@
+package com.aurionpro.ocp.violation.model;
+
+public class Circle implements Shape{
+	
+	private int radius;
+	
+	@Override
+	public int getArea() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

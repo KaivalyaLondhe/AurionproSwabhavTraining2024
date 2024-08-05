@@ -1,0 +1,35 @@
+package com.aurionpro.creational.abstractfactory.model;
+
+public class SavingsAccount implements IAccount{
+	
+	private long accountNumber;
+	private String name;
+	private double balance;
+	private double minimumBalance;
+	
+	
+
+	public SavingsAccount(long accountNumber, String name, double balance, double minimumBalance) {
+		super();
+		this.accountNumber = accountNumber;
+		this.name = name;
+		this.balance = balance;
+		this.minimumBalance = minimumBalance;
+		if(this.balance<this.minimumBalance) {
+			System.err.println("The available balance in your account is less than minimum balance");
+		}
+	}
+
+	@Override
+	public double credit(double amount) {
+		// TODO Auto-generated method stub
+		return ;
+	}
+
+	@Override
+	public double debit(double amount) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

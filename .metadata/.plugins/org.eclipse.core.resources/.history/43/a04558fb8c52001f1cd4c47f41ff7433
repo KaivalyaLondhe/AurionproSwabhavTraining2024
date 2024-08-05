@@ -1,0 +1,36 @@
+package com.aurionpro.model;
+
+import com.aurionpro.model.TicTacToeFacade;
+import com.aurionpro.model.Player;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+public class TicTacToeFacadeTest {
+
+    private TicTacToeFacade gameFacade;
+
+    @BeforeEach
+    public void setup() {
+        gameFacade = new TicTacToeFacade();
+    }
+
+    @Test
+    public void testPlayMove() {
+        gameFacade.playMove(0, 0);
+        // Test valid move
+        char[][] board = gameFacade.getBoard();
+        assertEquals('X', board[0][0]);
+        
+        gameFacade.playMove(0, 0);
+        // Test invalid move
+        assertEquals('X', board[0][0]);
+    }
+
+    @Test
+    public void testPlayAgain() {
+        // This is generally tested with integration or manual testing
+        // Mock user input and simulate 'play again' logic if necessary
+    }
+}
+

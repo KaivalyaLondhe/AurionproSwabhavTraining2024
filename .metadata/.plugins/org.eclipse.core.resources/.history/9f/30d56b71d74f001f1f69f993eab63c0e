@@ -1,0 +1,11 @@
+package com.aurionpro.structural.decorator.model;
+
+public class WheelAlign extends CarServiceDecorator{
+	ICarService obj = new CarServiceDecorator();
+	@Override
+	public double getCost() {
+		// TODO Auto-generated method stub
+		return 500+obj.getCost();
+	}
+
+}

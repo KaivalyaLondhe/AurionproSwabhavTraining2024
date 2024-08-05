@@ -1,0 +1,9 @@
+package com.aurionpro.ocp.solution.model;
+
+public class CalculateFixedDeposit {
+	private int account
+	FixedDeposit fixedDeposit = new FixedDeposit(accountNumber, name, principle, duration, interest);
+	public double calculateSimpleInterest() {
+		return 
+	}
+}

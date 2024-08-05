@@ -1,0 +1,8 @@
+package com.aurionpro.model;
+
+public class Student {
+	private StudentService studentService;
+	public double calculatePercentage() {
+		return (studentService.getMarks()*studentService.getSubject());
+	}
+}

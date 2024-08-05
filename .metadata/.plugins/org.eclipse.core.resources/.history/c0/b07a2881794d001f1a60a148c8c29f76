@@ -1,0 +1,8 @@
+package com.aurionpro.srp.violation.model;
+
+public class Invoice {
+	private String id;
+	private String description;
+	private double amount;
+	private double tax;
+}

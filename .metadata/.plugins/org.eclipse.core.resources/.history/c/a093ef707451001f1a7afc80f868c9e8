@@ -1,0 +1,6 @@
+package com.aurionpro.model;
+@FunctionalInterface
+public interface Players {
+	void playMove(String[][] board, int rowNumber, int columnNumber);
+	
+}

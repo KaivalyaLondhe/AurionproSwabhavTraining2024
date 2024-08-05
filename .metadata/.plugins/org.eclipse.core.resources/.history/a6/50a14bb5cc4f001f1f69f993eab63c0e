@@ -1,0 +1,18 @@
+package com.aurionpro.structural.adapter.test;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.aurionpro.structural.adapter.model.IItems;
+import com.aurionpro.structural.adapter.model.ShoppingCart;
+
+public class ShoppingCartTest {
+	public static void main(String[] args) {
+	
+		
+		ShoppingCart cart = new ShoppingCart();
+		List<IItems> listOfItems = new ArrayList<IItems>();
+		cart.addItemsToCart(listOfItems);
+		
+	}
+}

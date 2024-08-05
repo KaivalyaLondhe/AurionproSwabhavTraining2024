@@ -1,0 +1,68 @@
+package com.aurionpro.behavioural.observer.test;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+import com.aurionpro.behavioural.observer.model.Account;
+import com.aurionpro.behavioural.observer.model.INotifier;
+
+public class AccountTest {
+	static Scanner scanner = new Scanner(System.in);
+	static INotifier SmsNotifier;
+	static INotifier EmailNotifer;
+	static INotifier AppNotifier;
+	 static List<INotifier> notifiers = new ArrayList<INotifier>();
+
+	private static void optionForMoreNotifiers(Account account) {
+		System.out.println("Would you like to add any other notifiers? 1. Yes 2. No");
+		int choice = scanner.nextInt();
+		if (choice == 1) {
+			addingNotifiers(account);
+		}
+		if (choice == 2) {
+			return;
+		}
+		System.out.println("Please enter a valid input!");
+		return;
+		
+		
+
+	}
+
+	private static void addingNotifiers(Account account) {
+		System.out.println(
+				"Which notifications would you like to receive? 1. SMS Notifications, 2. Email Notifications, 3. App Notifications, 4. Exit");
+		int choice = scanner.nextInt();
+		switch (choice) {
+
+		case 1:
+			notifiers.add(SmsNotifier);
+			optionForMoreNotifiers(account);
+			break;
+		case 2:
+			notifiers.add(EmailNotifer);
+			optionForMoreNotifiers(account);
+			break;
+		case 3:
+			notifiers.add(AppNotifier);
+			optionForMoreNotifiers(account);
+			break;
+		case 4:
+			return;
+		default:
+			System.out.println("Please enter a valid input");
+		}
+
+	}
+
+	public static void main(String[] args) {
+
+		Account account = new Account(123456, "Kaivalya", 5000);
+		addingNotifiers(account);
+		account.credit(1000);
+		if(notifiers.contains(AppNotifier)) {
+			AppNotifier.notify();
+		}
+	}
+}

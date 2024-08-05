@@ -1,0 +1,12 @@
+package com.aurionpro.structural.composite.test;
+
+import com.aurionpro.structural.composite.model.CompoundGraphic;
+
+public class ClientCode {
+	public static void main(String[] args) {
+		CompoundGraphic graphic = new CompoundGraphic();
+		
+	}
+	
+	
+}

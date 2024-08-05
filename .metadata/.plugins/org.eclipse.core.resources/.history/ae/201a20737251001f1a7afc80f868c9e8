@@ -1,0 +1,10 @@
+package com.aurionpro.model;
+
+public class Player1 implements Players{
+
+	public void playMove(String[][] board) {
+		
+		
+	}
+
+}

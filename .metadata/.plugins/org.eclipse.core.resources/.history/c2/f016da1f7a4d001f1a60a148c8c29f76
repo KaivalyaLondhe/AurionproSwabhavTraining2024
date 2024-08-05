@@ -1,0 +1,8 @@
+package com.aurionpro.srp.violation.test;
+
+public class InvoiceTest {
+	public static void main(String[] args) {
+		System.out.println("Enter Invoice ID: ");
+		
+	}
+}

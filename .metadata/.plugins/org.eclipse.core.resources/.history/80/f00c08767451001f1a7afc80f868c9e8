@@ -1,0 +1,13 @@
+package com.aurionpro.model;
+
+public class Player1 implements Players{
+
+	@Override
+	public void playMove(String[][] board, int rowNumber, int columnNumber) {
+		// TODO Auto-generated method stub
+		board[rowNumber][columnNumber] = "X";
+	}
+
+	
+
+}

@@ -1,0 +1,10 @@
+package com.aurionpro.creational.abstractfactory.test;
+
+import com.aurionpro.creational.abstractfactory.model.ICarFactory;
+
+public class CarTest {
+	public static void main(String[] args) {
+		ICarFactory factory  = new MarutiCarFactory();
+		ICar 
+	}
+}

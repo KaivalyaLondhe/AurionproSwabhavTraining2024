@@ -1,0 +1,10 @@
+package com.aurionpro.structural.composite.model;
+
+public class Rectangle extends Dot{
+	
+	public Rectangle(int value1, int value2) {
+		super(value1, value2);
+		// TODO Auto-generated constructor stub
+	}
+
+}

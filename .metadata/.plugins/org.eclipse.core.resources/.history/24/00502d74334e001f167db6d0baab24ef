@@ -1,0 +1,7 @@
+package com.aurionpro.ocp.violation.test;
+
+public class FixedDepositTest {
+	public static void main(String[] args) {
+		FixedDeposit fixedDeposit = new FixedDeposit(123, "Kaivalya", 400,);
+	}
+}

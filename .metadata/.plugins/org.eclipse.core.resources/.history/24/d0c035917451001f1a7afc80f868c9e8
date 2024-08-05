@@ -1,0 +1,9 @@
+package com.aurionpro.model;
+
+import java.util.ArrayList;
+
+@FunctionalInterface
+public interface Players {
+	void playMove(ArrayList<String><String>[][] board, int rowNumber, int columnNumber);
+	
+}

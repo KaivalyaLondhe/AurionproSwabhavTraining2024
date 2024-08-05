@@ -1,0 +1,15 @@
+package com.aurionpro.model;
+
+import java.util.ArrayList;
+
+public class Player1 implements Players{
+
+	@Override
+	public void playMove(ArrayList<String>[][] board, int rowNumber, int columnNumber) {
+		// TODO Auto-generated method stub
+		board[rowNumber][columnNumber] = "X";
+	}
+
+	
+
+}

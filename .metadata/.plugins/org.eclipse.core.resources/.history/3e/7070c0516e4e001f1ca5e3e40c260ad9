@@ -1,0 +1,14 @@
+package com.aurionpro.model;
+
+import java.util.*;
+
+public class Region {
+	public Region() {
+		HashMap<Integer, String> regions = new HashMap<Integer, String>();
+		regions.put(1, "Europe");
+		regions.put(2, "Europe");
+		regions.put(3, "Europe");
+		regions.put(4, "Europe");
+		
+	}
+}

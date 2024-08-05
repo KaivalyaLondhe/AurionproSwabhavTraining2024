@@ -1,0 +1,13 @@
+package com.aurionpro.structural.composite.model;
+
+public class ComponentPartsOfComputer implements ComponentsOfComputer{
+	private String name;
+	private double price;
+	
+	@Override
+	public void getPrice() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

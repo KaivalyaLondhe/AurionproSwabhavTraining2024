@@ -1,0 +1,36 @@
+package com.aurionpro.structural.adapter.model;
+
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.DoubleStream;
+
+public class ShoppingCart {
+	private IItems chocolate;
+	private IItems biscuit;
+	private IItems hatAdapter;
+	
+	public ShoppingCart(IItems biscuit, IItems chocolate, IItems hatAdapter) {
+		super();
+		this.chocolate = biscuit;
+		this.biscuit = chocolate;
+		this.hatAdapter = hatAdapter;
+	}
+	public void addItemsToCart(List<IItems> cart) {
+		cart.add(chocolate);
+		cart.add(biscuit);
+		cart.add(hatAdapter);
+	}
+	public void getCartItems(List<IItems> cart) {
+		for(IItems item : cart)
+			System.out.println(item.getItemName());
+	}
+	public void getCartPrice(List<IItems>cart) {
+		DoubleStream prices =  cart.stream().mapToDouble((item)->item.getItemPrice());
+		double sum =prices.reduce(0,(price1,price2)->price1+price2);
+		System.out.println("Total is\t" +sum);
+	}
+	public void displayItems(List<IItems> cart) {
+		for(IItems item:cart)
+			System.out.println(item.getItemName() + "\t" + item.getItemPrice());
+	}
+}

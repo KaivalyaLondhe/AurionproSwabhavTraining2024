@@ -1,0 +1,11 @@
+package com.aurionpro.structural.proxy.test;
+
+import com.aurionpro.structural.proxy.model.Internet;
+
+public class ProxyInternetTest {
+	public static void main(String[] args) {
+		 Internet internet = new ProxyServer();
+	        internet.connectTo("google.com");
+	        internet.connectTo("banned.com");
+	}
+}

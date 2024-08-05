@@ -1,0 +1,13 @@
+package com.aurionpro.model;
+
+public class TicTacToe {
+	public static void main(String[] args) {
+		boolean player1Wins = false;
+		boolean player2Wins = false;
+		boolean drawGame = false;
+		char[][] board = new char[3][3];
+		Board boardObject = new Board();
+		boardObject.introduction(board);
+		boardObject.gameLogic(player1Wins, player2Wins, drawGame, board);
+	}
+}

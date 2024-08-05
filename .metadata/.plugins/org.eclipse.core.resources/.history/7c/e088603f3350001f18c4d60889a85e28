@@ -1,0 +1,27 @@
+package com.aurionpro.structural.composite.model;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Stream;
+
+public class CompositeOfComponents implements ComponentsOfComputer{
+	private String name;
+	List<ComponentsOfComputer> components = new ArrayList<>();
+	
+	public void addComponent(ComponentsOfComputer component) {
+		components.add(component);
+	}
+	public void removeComponent(ComponentsOfComputer component) {
+		components.remove(component);
+	}
+	public void getTotalPrice() {
+		Stream totalPrice = components.stream()
+								      .map(component.);
+	}
+	@Override
+	public void getPrice() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

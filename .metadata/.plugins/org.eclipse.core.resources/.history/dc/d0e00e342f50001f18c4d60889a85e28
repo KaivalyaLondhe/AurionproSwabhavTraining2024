@@ -1,0 +1,17 @@
+package com.aurionpro.structural.composite.test;
+
+import com.aurionpro.structural.composite.model.Circle;
+import com.aurionpro.structural.composite.model.CompoundGraphic;
+import com.aurionpro.structural.composite.model.Dot;
+
+public class ClientCode {
+	public static void main(String[] args) {
+		CompoundGraphic graphic = new CompoundGraphic();
+		graphic.add(new Circle(2,4,10));
+		graphic.add(new Dot(4,5));
+		graphic.move(10, 20);
+		graphic.draw();
+	}
+	
+	
+}

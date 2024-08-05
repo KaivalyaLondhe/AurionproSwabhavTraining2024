@@ -1,0 +1,16 @@
+package com.aurionpro.structural.composite.model;
+
+public class Circle extends Dot{
+	private int radius;
+	public Circle(int value1, int value2, int radius) {
+		super(value1, value2);
+		// TODO Auto-generated constructor stub
+		this.radius = radius;
+	}
+	@Override
+	public void draw() {
+		
+	}
+	
+
+}

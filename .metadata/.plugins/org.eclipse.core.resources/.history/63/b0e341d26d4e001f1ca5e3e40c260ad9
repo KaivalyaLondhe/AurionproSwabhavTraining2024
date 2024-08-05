@@ -1,0 +1,8 @@
+package com.aurionpro.model;
+
+import java.util.HashMap;
+
+public class Region {
+	HashMap<Integer, String> regions = new HashMap<Integer, String>();
+	
+}

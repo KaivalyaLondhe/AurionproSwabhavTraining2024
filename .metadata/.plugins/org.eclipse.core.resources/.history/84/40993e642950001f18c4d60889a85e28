@@ -1,0 +1,5 @@
+package com.aurionpro.structural.composite.model;
+
+public interface IGraphic {
+	void move(int value1, int value2);
+}

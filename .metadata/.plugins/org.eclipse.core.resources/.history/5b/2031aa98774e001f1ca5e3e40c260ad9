@@ -1,0 +1,25 @@
+package com.aurionpro.test;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
+
+import com.aurionpro.model.Country;
+
+public class CountryTest {
+	public static void main(String[] args) {
+		List <Country> countries = new ArrayList<Country>();
+		countries.add(new Country("IT", "Italy", 1));
+		countries.add(new Country("JP", "Japan", 3));
+		countries.add(new Country("US", "United States of America", 3));
+		Scanner scanner = new Scanner (System.in);
+		String inputCountryCode = new String(scanner.next());
+		List<String> countryName = countries.stream().filter((country)->country.getCountryCode().equals(inputCountryCode)).map((Country)->Country.getCountryName()).collect(Collectors.toList());
+		countryName.stream().forEach((country)->System.out.println(country));
+		Integer id = new Integer(scanner.nextInt());
+		List<String> countryById = countries.stream().filter((country)->country.getRegionId().equals(id)).map((Country)-> Country.getCountryName()).collect(Collectors.toList());
+		
+	}
+}

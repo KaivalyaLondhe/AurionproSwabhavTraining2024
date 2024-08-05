@@ -1,0 +1,23 @@
+package com.aurionpro.creational.abstractfactory.test;
+
+import java.util.Scanner;
+
+public class AccountTest {
+	static Scanner scanner = new Scanner(System.in);
+	private void menu() {
+		System.out.println("Choose what you want to do today. \n 1. Create Account \n 2. Exit");
+		int choice = scanner.nextInt();
+		switch(choice) {
+		case 1: 
+			typeOfAccount();
+		}
+		
+	}
+	private void typeOfAccount() {
+		System.out.println("Choose which account you wish to create. \n 1. Savings Account \n 2. Current Account");
+	}
+	public static void main(String[] args) {
+		
+	
+}
+}

@@ -1,0 +1,112 @@
+package com.aurionpro.model;
+
+import java.util.Scanner;
+
+public class Board {
+	static Scanner scanner = new Scanner(System.in);
+	private char[][] board;
+	Player player = new Player('X');
+
+	public char[][] initializeBoard() {
+		board = new char[3][3];
+		for (int i = 0; i < board.length; i++) {
+			for (int j = 0; j < board.length; j++) {
+				board[i][j] = '-';
+			}
+
+		}
+		return board;
+	}
+
+	public void printBoard() {
+		for (int i = 0; i < board.length; i++) {
+			for (int j = 0; j < board.length; j++) {
+				System.out.print(board[i][j] + "\t");
+			}
+			System.out.println();
+
+		}
+	}
+
+	public boolean isBoardFull() {
+		for (int i = 0; i < board.length; i++) {
+			for (int j = 0; j < board.length; j++) {
+				if (board[i][j] == '-')
+					return false;
+			}
+		}
+		return true;
+	}
+
+	public boolean conditionToCheckRows() {
+		for (int i = 0; i < board.length; i++) {
+			if (board[i][0] == 'X' && board[i][1] == 'X' && board[i][1] == 'X' && board[i][2] == 'X') {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	public boolean condtionToCheckColumns() {
+		for (int i = 0; i < board.length; i++) {
+			if (board[0][i] == 'X' && board[1][i] == 'X' && board[1][i] == 'X' && board[2][i] == 'X') {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	public boolean conditionToCheckDiagonal() {
+		if (board[0][0] == 'X' && board[1][1] == 'X' && board[1][1] == 'X' && board[2][2] == 'X') {
+			return true;
+		}
+		// checking right to left diagonal
+		if (board[0][2] == 'X' && board[1][1] == 'X' && board[1][1] == 'X' && board[2][0] == 'X') {
+			return true;
+		}
+		return false;
+	}
+
+	public void introduction() {
+		System.out.println("Welcome to the Tic Tac Toe game!!!");
+		System.out.println("This game is of two players ");
+		System.out.println("Player 1 plays with 'X");
+		System.out.println("whereas");
+		System.out.println("Player 2 plays with 'O");
+		System.out.println("lets begin!");
+		initializeBoard();
+		System.out.println("Initial Board");
+		printBoard();
+	}
+	public void gameLogic(boolean player1Wins, boolean player2Wins, boolean drawGame) {
+		while(!player1Wins||!player2Wins||!drawGame) {
+			System.out.println("It's turn of player 1");
+			System.out.print("Enter row number:  ");
+			int row = scanner.nextInt()-1;
+			System.out.print("Enter column number:  ");
+			int column = scanner.nextInt()-1;
+			player.play(row, column);
+			player.playerSwitch();
+			conditionToCheckRows();
+			condtionToCheckColumns();
+			conditionToCheckDiagonal();
+			if(conditionToCheckRows()||conditionToCheckDiagonal()||condtionToCheckColumns())
+				player1Wins = true;
+			System.out.println("It's turn of player 2");
+			System.out.print("Enter row number:  ");
+			row = scanner.nextInt()-1;
+			System.out.print("Enter column number:  ");
+			column = scanner.nextInt()-1;
+			player.play(row, column);
+			player.playerSwitch();
+			conditionToCheckRows();
+			condtionToCheckColumns();
+			conditionToCheckDiagonal();
+			if(conditionToCheckRows()||conditionToCheckDiagonal()||condtionToCheckColumns())
+				player2Wins = true;
+			if()
+			
+		}
+		
+	}
+}

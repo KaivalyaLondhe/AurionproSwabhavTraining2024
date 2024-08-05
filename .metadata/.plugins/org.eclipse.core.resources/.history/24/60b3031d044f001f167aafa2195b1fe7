@@ -1,0 +1,7 @@
+package com.aurionpro.creational.factory.model;
+
+public class AccountFactory {
+	public static IAccount accountFactory() {
+		switch()
+	}
+}

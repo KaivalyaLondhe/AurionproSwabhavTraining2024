@@ -1,0 +1,9 @@
+package com.aurionpro.iso.sollution.test;
+
+import com.aurionpro.iso.solution.model.ILabour;
+
+public class WorkerTest {
+	public static void main(String[] args) {
+		ILabour labour = new ILabour();
+	}
+}

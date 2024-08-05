@@ -1,0 +1,48 @@
+package com.aurionpro.model;
+
+public class TicTacToeFacade {
+    private Board board;
+    private Player currentPlayer;
+    
+    public TicTacToeFacade() {
+        this.board = new Board();
+        this.currentPlayer = new Player('X'); // Player 'X' starts
+        board.introduction();
+    }
+
+    public void startGame() {
+        board.gameLogic(currentPlayer);
+    }
+
+    public void playMove(int row, int column) {
+        if (!currentPlayer.play(row, column, board.getBoard())) {
+            System.out.println("Invalid move. Try again.");
+            return;
+        }
+        
+        board.printBoard();
+        
+        if (checkWin()) {
+            return;
+        }
+        
+        if (board.isBoardFull()) {
+            System.out.println("It's a draw!");
+            return;
+        }
+        
+        currentPlayer.switchPlayer();
+    }
+
+    private boolean checkWin() {
+        if (board.checkWin(currentPlayer)) {
+            if (currentPlayer.getSymbol() == 'X') {
+                System.out.println("Player 1 wins!");
+            } else {
+                System.out.println("Player 2 wins!");
+            }
+            return true;
+        }
+        return false;
+    }
+}
